@@ -31,9 +31,7 @@
 // line "// Your code here", write your implementation code.
 
 function yelling(words) {
-  const uppercased = words.map(word => word.toUpperCase())
-
-  console.log(uppercased)
+  return words.map(word => word.toUpperCase())
 }
 
 /**
@@ -47,9 +45,7 @@ function yelling(words) {
  */
 
 function doubleTrouble(numbers) {
-  const multiple = numbers.map(number => number * 2)
-
-  console.log(multiple)
+  return numbers.map(number => number * 2)
 }
 
 /*
@@ -62,11 +58,7 @@ function doubleTrouble(numbers) {
  */
 
 function stringyIndexes(strings) {
-  const newStrings = strings.map(
-    (word, index) => `${word} is at index ${index}`
-  )
-
-  console.log(newStrings)
+  return strings.map((word, index) => `${word} is at index ${index}`)
 }
 
 /*
@@ -78,9 +70,7 @@ function stringyIndexes(strings) {
  */
 
 function onlyTheEvenSurvive(numbers) {
-  const survive = numbers.filter(number => number % 2 == 0)
-
-  console.log(survive)
+  return numbers.filter(number => number % 2 == 0)
 }
 
 /*
@@ -92,9 +82,7 @@ function onlyTheEvenSurvive(numbers) {
  */
 
 function onlyTheEvenIndexedSurvive(numbers) {
-  const survive = numbers.filter((number, index) => number % 2 == 0)
-
-  console.log(survive)
+  return numbers.filter((number, index) => index % 2 == 0)
 }
 
 /*
@@ -114,13 +102,10 @@ function onlyTheEvenIndexedSurvive(numbers) {
  *
  */
 
-function bestMoviesOfTheYear(movieObjectArray) {
-  const bestMoviesFilter = movieObjectArray.filter(
-    movie => movie.Year == movie.Score >= 90
-  )
-  let namesOfMovies = bestMoviesFilter.map(movie => movie.Name)
-
-  console.log(namesOfMovies)
+function bestMoviesOfTheYear(movieObjectArray, yearToMatch) {
+  return movieObjectArray
+    .filter(movie => movie.score > 90 && movie.year === yearToMatch)
+    .map(movie => movie.name)
 }
 
 /*
@@ -133,9 +118,7 @@ function bestMoviesOfTheYear(movieObjectArray) {
  */
 
 function everyoneIsOdd(numbers) {
-  const oddNumbers = numbers.map(number => number % 2 != 0)
-
-  console.log(oddNumbers)
+  return numbers.every(number => number % 2 != 0)
 }
 
 /*
@@ -148,9 +131,7 @@ function everyoneIsOdd(numbers) {
  */
 
 function findTheNeedle(strings) {
-  const listStrings = strings.filter(sentence => sentence.includes('needle'))
-
-  console.log(listStrings)
+  return strings.find(sentence => sentence.includes('needle'))
 }
 
 /*
@@ -163,9 +144,7 @@ function findTheNeedle(strings) {
  */
 
 function findTheNeedleIndex(strings) {
-  const listStrings = strings.findIndex(sentence => sentence.includes('needle'))
-
-  console.log(listStrings)
+  return strings.findIndex(sentence => sentence.includes('needle'))
 }
 
 /*
@@ -178,9 +157,7 @@ function findTheNeedleIndex(strings) {
  */
 
 function someoneToLove(strings) {
-  const love = strings.map(string => string.length == 4)
-
-  console.log(love)
+  return strings.some(string => string.length === 4)
 }
 
 /*
